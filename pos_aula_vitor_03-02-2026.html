@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resumo Pós-Aula — Vitor — CZK English</title>
+
+  <style>
+    :root{
+      --page-bg: #f4f7fa;
+      --card-bg: #fff;
+      --accent: #2f86e6;
+      --accent-dark: #1f6fd1;
+      --green: #36b37e;
+      --muted: #6b7280;
+      --border: #e6eef8;
+      --box-radius: 12px;
+      --card-width: 720px;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      padding:0;
+      background:var(--page-bg);
+      font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:48px 20px;
+    }
+
+    .card{
+      width:100%;
+      max-width:var(--card-width);
+      background:var(--card-bg);
+      border-radius:18px;
+      padding:28px;
+      box-shadow:0 6px 22px rgba(33,47,60,0.06);
+      border:1px solid rgba(15,33,64,0.03);
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:12px;
+      margin-bottom:8px;
+    }
+
+    .badge{
+      background:linear-gradient(180deg,#fff,#f2fbff);
+      border:1px solid var(--border);
+      padding:8px 12px;
+      border-radius:999px;
+      color:var(--accent);
+      font-weight:700;
+      font-size:0.85rem;
+    }
+
+    h1{
+      margin:0;
+      font-size:1.3rem;
+      color:#0f1724;
+    }
+
+    .meta{
+      color:var(--muted);
+      font-size:0.92rem;
+      margin-top:6px;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:10px;
+      border:none;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      cursor:pointer;
+      box-shadow:0 6px 14px rgba(47,134,230,0.12);
+    }
+
+    .btn.secondary{
+      background:#fff;
+      color:var(--accent);
+      border:1px solid var(--border);
+      box-shadow:none;
+    }
+
+    main{margin-top:18px;}
+    section{margin-top:18px;}
+
+    .panel{
+      background:#fbfdff;
+      border-radius:12px;
+      padding:16px;
+      border:1px solid var(--border);
+    }
+
+    .outline-card{
+      border-radius:10px;
+      border:1px solid var(--border);
+      padding:16px;
+      background:#fff;
+    }
+
+    .vocab-grid{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .vocab{
+      flex:1;
+      min-width:220px;
+      border-radius:10px;
+      padding:14px;
+      border:2px solid #dfeefe;
+      background:#fff;
+    }
+
+    .vocab.green{
+      border-color:#c9f3dc;
+      background:#f5fff6;
+    }
+
+    .vocab h3{
+      margin:0;
+      font-size:1rem;
+      color:#154360;
+    }
+
+    .vocab p{
+      margin:8px 0 0 0;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    .media-row{
+      display:flex;
+      gap:14px;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+
+    .media-btn{
+      background:#fff;
+      border:1px solid var(--border);
+      padding:12px 16px;
+      border-radius:10px;
+      font-weight:700;
+      color:var(--accent);
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      min-width:200px;
+      justify-content:center;
+    }
+
+    .homework{
+      background:#f3fff6;
+      border:1px solid #d7f5df;
+      border-radius:10px;
+      padding:14px;
+      margin-top:10px;
+    }
+
+    .speaking{
+      margin-top:18px;
+      padding:16px;
+      border-radius:12px;
+      background:linear-gradient(180deg,#ffffff,#fbfdff);
+      border:1px solid var(--border);
+      max-width:640px;
+    }
+
+    .speaking h2{
+      margin:0 0 10px 0;
+      font-size:1.05rem;
+      color:#0f1724;
+    }
+
+    .talk-table{
+      width:100%;
+      border-collapse:collapse;
+      border-radius:10px;
+      overflow:hidden;
+      background:#fff;
+      border:1px solid #e1e9f5;
+      font-size:0.9rem;
+    }
+
+    .talk-table th,
+    .talk-table td{
+      padding:8px 10px;
+      text-align:left;
+    }
+
+    .talk-table th{
+      background:#eef4ff;
+      color:#1b3556;
+      font-weight:700;
+      border-bottom:1px solid #dde6fa;
+    }
+
+    .row-teacher{background:#e7f2ff;}
+    .row-student{background:#e8f7ef;}
+
+    footer{
+      margin-top:20px;
+      color:var(--muted);
+      font-size:0.9rem;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+<article class="card">
+<header>
+<div>
+<div style="display:flex;gap:10px;align-items:center;">
+<span class="badge">PÓS-AULA</span>
+<h1>Simple Past — Verbos no passado</h1>
+</div>
+<div class="meta" style="margin-top:8px;">
+<strong>Professor:</strong> César &nbsp;•&nbsp;
+<strong>Aluno:</strong> Vitor &nbsp;•&nbsp;
+<strong>Data:</strong> 03/02/2026
+</div>
+</div>
+<div class="actions">
+<a class="btn" href="#" onclick="window.print();return false;">Imprimir / Salvar PDF</a>
+</div>
+</header>
+
+<main>
+<section class="panel">
+<p style="margin:0;font-weight:600;color:#08325a;">
+Aula focada em revisão e prática do Simple Past, com atividades do livro e jogos orais.
+</p>
+</section>
+
+<section>
+<h2>Resumo da Aula</h2>
+<div class="outline-card">
+<p>Iniciamos a aula com um aquecimento revisando <strong>adjetivos</strong> da aula anterior. Em seguida, trabalhamos a página do livro focada em <strong>verbos no passado simples</strong>, com atenção especial à formação de frases afirmativas, negativas e interrogativas.</p>
+<p>Reforçamos que, ao usar <strong>did / didn’t</strong>, o verbo principal permanece no <strong>presente</strong>. Também praticamos a diferença entre frases no passado sem auxiliar e perguntas com <em>did</em>.</p>
+<p>Finalizamos com jogos orais de <strong>certo ou errado</strong> e criação de pequenas histórias usando verbos selecionados, estimulando fluidez e correção.</p>
+</div>
+</section>
+
+<section>
+<h2>Frases usadas em aula</h2>
+<div class="outline-card">
+<ul>
+<li>I went to the market.</li>
+<li>Did you buy anything?</li>
+<li>I didn’t eat at home.</li>
+<li>We met our friends yesterday.</li>
+<li>He didn’t come to the party.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Vocabulário-chave</h2>
+<div class="vocab-grid">
+<div class="vocab">
+<h3>did / didn’t</h3>
+<p>Auxiliar do passado simples<br><small>Did you go yesterday?</small></p>
+</div>
+<div class="vocab green">
+<h3>studied</h3>
+<p>passado de study<br><small>I studied English last night.</small></p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Vocabulário completo da aula</h2>
+<div class="outline-card">
+<ul>
+<li>go – ir → went</li>
+<li>have – ter → had</li>
+<li>buy – comprar → bought</li>
+<li>meet – encontrar → met</li>
+<li>eat – comer → ate</li>
+<li>come – vir → came</li>
+<li>get – pegar / conseguir → got</li>
+<li>become – se tornar → became</li>
+<li>take – pegar / levar → took</li>
+<li>drive – dirigir → drove</li>
+<li>see – ver → saw</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Correções importantes</h2>
+<div class="outline-card">
+<ul>
+<li><strong>Pronúncia:</strong> <em>studied</em> ❌ /ˈstʌdɪd/ → ✔️ /ˈstʌdid/</li>
+<li><strong>Estrutura:</strong> ❌ Did you <em>went</em>? → ✔️ Did you <em>go</em>?</li>
+<li><strong>Negativa:</strong> ❌ I didn’t <em>ate</em>. → ✔️ I didn’t <em>eat</em>.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Link do vídeo</h2>
+<div class="media-row">
+<span class="media-btn">🎥 Aula presencial (sem gravação)</span>
+</div>
+</section>
+
+<section class="speaking">
+<h2>Tempo de Fala (Talk Time)</h2>
+<table class="talk-table">
+<thead>
+<tr><th>Quem falou</th><th>Porcentagem</th><th>Duração aproximada</th></tr>
+</thead>
+<tbody>
+<tr class="row-teacher"><td>César</td><td>65%</td><td>~32 min</td></tr>
+<tr class="row-student"><td>Vitor</td><td>35%</td><td>~18 min</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Homework</h2>
+<div class="homework">
+<p>Ler o pós-aula de 2 a 3 vezes na semana.</p>
+</div>
+</section>
+</main>
+
+<footer>
+<p>© 2026 CZK English</p>
+</footer>
+</article>
+</div>
+</body>
+</html>
